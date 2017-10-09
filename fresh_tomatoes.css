@@ -1,0 +1,147 @@
+body {
+    padding-top: 80px;
+    padding-bottom: 80px; /*add padding at bottom for movies on bottom row so body doesn't need to expand (thus causing lag)*/
+    font-family: 'Encode Sans Expanded', sans-serif;
+    background: #232526;
+}
+
+.movie-content {
+    position: relative;
+    width: 220px;
+    height: 342px;
+    margin: 0 auto;
+    overflow: hidden;
+    -webkit-box-shadow: 9px 9px 7px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 9px 9px 7px -2px rgba(0,0,0,0.75);
+    box-shadow: 9px 9px 7px -2px rgba(0,0,0,0.75);
+    transition: all 1.2s;
+
+}
+
+.movie-title{
+    position: absolute;
+    width: 220px; 
+    height:342px;
+    color: lavender;  
+    font-size: 1.1em; 
+    text-align: center;
+    font-weight: 700;
+    padding: 5px 15px;
+    z-index: 1; 
+    top: 280px;
+    background-color: rgba(0, 0, 0, 1);
+    transition: all .8s;
+}
+
+.movie-rating {
+    margin-top: -3px;
+    padding: 10px;
+    font-size: .4em;
+    letter-spacing: .3em;
+}
+
+.fa-star {
+    color: grey;
+    transition: font-size 1.5s;
+}
+
+.fa-star.active {
+    color: yellow;
+}
+
+.movie-content:hover .fa-star {
+    font-size: 2em; /* make stars bigger when user hovers over a movie */
+}
+
+.movie-synopsis {
+    font-weight: 400;
+    color: white;
+    margin-top: 15px;
+    height: 175px;
+    overflow-y: scroll; /* scroll if synopsis goes past set height of this div */
+    font-size: 0.6em;
+    text-align: justify;
+}
+
+.play-trailer-btn {
+    color: white;
+    width: 100%;
+    margin-top: 20px;
+    background-color: goldenrod;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.fa-youtube-play {
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+
+.play-trailer-txt {
+    font-size: .9em;
+}
+
+.play-trailer-btn:hover {
+    background-color: palegoldenrod;
+    color: grey;
+}
+
+
+.movie-poster {
+    width: 220px;
+    height: 342px;
+}
+
+.movie-content:hover{
+    transform: scale(1.2, 1.2);
+    -webkit-box-shadow: 14px 13px 19px -4px rgba(0,0,0,0.3);
+    -moz-box-shadow: 14px 13px 19px -4px rgba(0,0,0,0.3);
+    box-shadow: 14px 13px 19px -4px rgba(0,0,0,0.3);
+}
+
+.movie-content:hover .movie-title{
+    top: 0px;
+}
+
+
+.fa-film {
+    color: palegoldenrod;
+    font-size: 1.5em;
+}
+
+#trailer .modal-dialog {
+    margin-top: 80px;
+    width: 640px;
+    height: 480px;
+}
+.hanging-close {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    z-index: 9001;
+}
+#trailer-video {
+    width: 100%;
+    height: 100%;
+}
+.movie-tile {
+    margin-bottom: 20px;
+    padding-top: 20px;
+
+}
+
+.scale-media {
+    padding-bottom: 56.25%;
+    position: relative;
+}
+.scale-media iframe {
+    border: none;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: black;
+}
