@@ -14,8 +14,6 @@ main_page_head = '''
     <!-- Bootstrap 3 -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 
     <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -60,9 +58,15 @@ main_page_content = '''
       {movie_tiles}
     </div>
 
-    <!-- Site Javascript -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+    <!-- Site JS -->
     <script src="fresh_tomatoes.js"></script>
-    
+
   </body>
 </html>
 '''
@@ -80,9 +84,11 @@ movie_tile_content = '''
                 {movie_synopsis}
             </div>
 
-            <div class = "play-trailer-btn" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
-            <i class="fa fa-youtube-play" aria-hidden="true"></i> <span class=play-trailer-txt>Play Trailer</span>
-            
+            <div class = "play-trailer-btn" data-trailer-youtube-id=
+            "{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
+            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            <span class=play-trailer-txt>Play Trailer</span>
+
         </div>
         </div>
     </div>
@@ -94,7 +100,7 @@ def create_movie_tiles_content(movies):
     # The HTML content for this section of the page
     content = ''
     for movie in movies:
-        
+
         # Extract the youtube ID from the url
         youtube_id_match = re.search(
             r'(?<=v=)[^&#]+', movie.trailer_youtube_url)
@@ -103,10 +109,10 @@ def create_movie_tiles_content(movies):
         trailer_youtube_id = (youtube_id_match.group(0) if youtube_id_match
                               else None)
 
-        #Make active or inactive stars depending on the value of movie's rating
+        # Make active or inactive stars depending on the value of movie's rating
         movie_rating = ''
 
-        for i in range(0,5):
+        for i in range(0, 5):
             if i < movie.rating:
                 movie_rating += "<i class='fa fa-star active' aria-hidden='true'></i>"
             else:
@@ -139,4 +145,3 @@ def open_movies_page(movies):
     # open the output file in the browser (in a new tab, if possible)
     url = os.path.abspath(output_file.name)
     webbrowser.open('file://' + url, new=2)
-

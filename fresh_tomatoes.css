@@ -1,6 +1,6 @@
 body {
     padding-top: 80px;
-    padding-bottom: 80px; /*add padding at bottom for movies on bottom row so body doesn't need to expand (thus causing lag)*/
+    padding-bottom: 80px; /* to prevent lag when bottom row movie scales up */
     font-family: 'Encode Sans Expanded', sans-serif;
     background: #232526;
 }
@@ -65,7 +65,6 @@ body {
 
 .play-trailer-btn {
     color: white;
-    width: 100%;
     margin-top: 20px;
     background-color: goldenrod;
     padding: 10px;
