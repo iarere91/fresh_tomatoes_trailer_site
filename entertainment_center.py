@@ -92,7 +92,7 @@ movies.append(media.Movie(
     destroy the `one ring', while Aragorn leads the forces of good against 
     Sauron's evil army at the stone city of Minas Tirith.
     """,
-    10,
+    5,
     "https://goo.gl/x7cqxJ",
     "https://youtu.be/WIrRJ8bCZYQ"))
 
