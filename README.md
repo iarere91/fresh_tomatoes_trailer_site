@@ -21,8 +21,13 @@ full path to the folder containing the movie trailer files.
 3. Run `python entertainment_center.py` to generate and open the 
 `fresh_tomatoes.html` file.
 
-### View on Cloud9 
+#### View on Cloud9 
 
 Click [here](https://preview.c9users.io/iarere91/fresh-tomatoes-trailer-site/fresh_tomatoes.html)
 if you would simply like to view the application.
+
+#### How to View Trailer
+
+Hover over a movie to view its synopsis, and click the **'Play Trailer'** button
+to view its trailer.
 

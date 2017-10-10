@@ -1,7 +1,13 @@
 import media
 import fresh_tomatoes
 
+# Create an array to store the movie objects
 movies = []
+
+# Instantiate the movie objects 
+# Create movie object as follows:
+# Movie(title, synopsis, rating, box art, youtube link)
+# Rating is an integer, and other attributes are strings
 movies.append(media.Movie(
     "Toy Story",
     """
@@ -74,5 +80,20 @@ movies.append(media.Movie(
     4,
     "https://goo.gl/8U3ZgW",
     "https://youtu.be/MYD_xxY5wEI"))
+    
+movies.append(media.Movie(
+    "Lord of the Rings - Return of the King",
+    """
+    The culmination of nearly 10 years' work and conclusion to Peter Jackson's 
+    epic trilogy based on the timeless J.R.R. Tolkien classic, "The Lord of 
+    the Rings: The Return of the King" presents the final confrontation 
+    between the forces of good and evil fighting for control of the future 
+    of Middle-earth. Hobbits Frodo and Sam reach Mordor in their quest to 
+    destroy the `one ring', while Aragorn leads the forces of good against 
+    Sauron's evil army at the stone city of Minas Tirith.
+    """,
+    10,
+    "https://goo.gl/x7cqxJ",
+    "https://youtu.be/WIrRJ8bCZYQ"))
 
 fresh_tomatoes.open_movies_page(movies)
