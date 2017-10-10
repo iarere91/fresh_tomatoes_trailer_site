@@ -110,6 +110,7 @@ def create_movie_tiles_content(movies):
                               else None)
 
         # Make active or inactive stars depending on the value of movie's rating
+        # The active class is defined in css, and makes the star yellow.
         movie_rating = ''
 
         for i in range(0, 5):
