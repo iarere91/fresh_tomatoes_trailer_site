@@ -4,10 +4,9 @@ import fresh_tomatoes
 # Create an array to store the movie objects
 movies = []
 
-# Instantiate the movie objects 
-# Create movie object as follows:
-# Movie(title, synopsis, rating, box art, youtube link)
-# Rating is an integer, and other attributes are strings
+# Instantiate the movie objects and add them to the movies array
+# A movie is instantiated as follows:
+# Movie(title, synopsis, rating, box art image link, youtube video link)
 movies.append(media.Movie(
     "Toy Story",
     """
@@ -57,11 +56,11 @@ movies.append(media.Movie(
     """
     Adaptation of the first of J.K. Rowling's popular children's novels
     about Harry Potter, a boy who learns on his eleventh birthday that he is
-    the orphaned son of two powerful wizards and possesses unique magical powers
-    of his own. He is summoned from his life as an unwanted child to become a
-    student at Hogwarts, an English boarding school for wizards. There, he meets
-    several friends who become his closest allies and help him discover the
-    truth about his parents' mysterious deaths.
+    the orphaned son of two powerful wizards and possesses unique magical
+    powers of his own. He is summoned from his life as an unwanted child
+    to become a student at Hogwarts, an English boarding school for wizards.
+    There, he meets several friends who become his closest allies and help
+    him discover the truth about his parents' mysterious deaths.
     """,
     4,
     "https://goo.gl/BnUVoM",
@@ -80,20 +79,22 @@ movies.append(media.Movie(
     4,
     "https://goo.gl/8U3ZgW",
     "https://youtu.be/MYD_xxY5wEI"))
-    
+
 movies.append(media.Movie(
     "Lord of the Rings - Return of the King",
     """
-    The culmination of nearly 10 years' work and conclusion to Peter Jackson's 
-    epic trilogy based on the timeless J.R.R. Tolkien classic, "The Lord of 
-    the Rings: The Return of the King" presents the final confrontation 
-    between the forces of good and evil fighting for control of the future 
-    of Middle-earth. Hobbits Frodo and Sam reach Mordor in their quest to 
-    destroy the `one ring', while Aragorn leads the forces of good against 
+    The culmination of nearly 10 years' work and conclusion to Peter Jackson's
+    epic trilogy based on the timeless J.R.R. Tolkien classic, "The Lord of
+    the Rings: The Return of the King" presents the final confrontation
+    between the forces of good and evil fighting for control of the future
+    of Middle-earth. Hobbits Frodo and Sam reach Mordor in their quest to
+    destroy the `one ring', while Aragorn leads the forces of good against
     Sauron's evil army at the stone city of Minas Tirith.
     """,
     5,
     "https://goo.gl/x7cqxJ",
     "https://youtu.be/WIrRJ8bCZYQ"))
 
+# Call to open_movies_page function in fresh_tomatoes to generate HTML file
+# Pass in the list of movie objects, which is the array called 'movies'
 fresh_tomatoes.open_movies_page(movies)
